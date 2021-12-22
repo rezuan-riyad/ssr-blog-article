@@ -1,0 +1,24 @@
+extends layout 
+
+block content 
+  h1(class='heading')= title 
+  if articles.length == 0
+    div 
+      h3 No article found
+      a(href='/add-article') Add New Article
+  each article in articles
+    div(
+      id=article._id
+      class='shadow p-3 mb-5 bg-white rounded content-box')
+      h3 #{article.title} 
+      p(class='text-secondary') #{article.author} 
+      p #{article.content.slice(0, 100)+"..."}
+        a(href="article/"+article._id) See Details
+      a(
+        role="button" 
+        class="btn btn-danger del-btn"
+        articleId=article._id) Delete
+
+block script 
+  script 
+    include ../js/home.js

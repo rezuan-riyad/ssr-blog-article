@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+    if error 
+      div(class="not-found")
+        h6 Article Not Found
+    if article 
+      div
+        h1(class='heading') #{article.title} 
+        p(class='text-secondary') #{article.author} 
+        br
+        p #{article.content}

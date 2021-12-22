@@ -1,0 +1,35 @@
+extends layout 
+
+block content 
+  h1(class='heading') Add New Article 
+  div(class='form-div')
+    if message
+      div(
+        class="alert alert-success"
+        role="alert") #{message} 
+    if error 
+      div(
+        class="alert alert-danger"
+        role="alert"
+      ) #{error}
+    form(method='post')
+      input(
+        id='title'
+        type='text'
+        name='title'
+        placeholder='Set Title')
+
+      input(
+        id='author'
+        type='text'
+        name='author'
+        placeholder='Author Name')
+      
+      textarea(
+        id='content'
+        name='content'
+        placeholder='Write Content')
+
+      button(
+        type="submit"
+      ) Post

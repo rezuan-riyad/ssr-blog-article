@@ -1,0 +1,45 @@
+.sidebar-nav {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+.heading {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.content-box{
+  cursor: pointer;
+}
+li {
+  margin: 10px 10px;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: #424242;
+}
+.form-div {
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid lightgray;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input, textarea, button{
+  margin: .5rem 0;
+  padding: 4px 1rem;
+}
+
+input, textarea{
+  font-size: 14px;
+}
+
+.not-found{
+  margin-top: 30vh;
+}
